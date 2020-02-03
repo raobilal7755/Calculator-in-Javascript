@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- now we start scripting of calculator .. lets start -->
+	<script type="text/javascript">
+		function btnplus(){
+			document.calculator.display.value +="+";
+			document.calculator.display.style.textAlign="right";
+		}
+		function btnsub(){
+			document.calculator.display.value +="-";
+			document.calculator.display.style.textAlign="right";
+		}
+		function btnmul(){
+			document.calculator.display.value +="*";
+			document.calculator.display.style.textAlign="right";
+		}
+		function btndiv(){
+			document.calculator.display.value +="/";
+			document.calculator.display.style.textAlign="right";
+		}
+		function btnmod(){
+			document.calculator.display.value +="%";
+			document.calculator.display.style.textAlign="right";
+		}
+		function btnclear(){
+			document.calculator.display.value ="";
+			document.calculator.display.style.textAlign="right";
+		}
+
+		function btndot(){
+			document.calculator.display.value +=".";
+			document.calculator.display.style.textAlign="right";
+		}
+	</script>
+</head>
+<body>
+	<div>
+	<form name="calculator">
+		<input type="text" name="display" id="result-screen" placeholder="0">
+
+		<input type="button" value="7" class="button" onclick="document.calculator.display.value +='7'">
+		<input type="button" value="8" class="button" onclick="document.calculator.display.value +='8'">
+		<input type="button" value="9" class="button" onclick="document.calculator.display.value +='9'">
+
+		<input type="button" value="+" class="button" onclick="btnplus()">
+
+		<input type="button" value="4" class="button" onclick="document.calculator.display.value +='4'">
+		<input type="button" value="5" class="button" onclick="document.calculator.display.value +='5'">
+		<input type="button" value="6" class="button" onclick="document.calculator.display.value +='6'">
+
+		<input type="button" value="-" class="button" onclick="btnsub()">
+
+		<input type="button" value="1" class="button" onclick="document.calculator.display.value +='1'">
+		<input type="button" value="2" class="button" onclick="document.calculator.display.value +='2'">
+		<input type="button" value="3" class="button" onclick="document.calculator.display.value +='3'">
+
+		<input type="button" value="*" class="button" onclick="btnmul()">
+
+		<input type="button" value="0" class="button" onclick="document.calculator.display.value +='0'">
+
+		<input type="button" value="%" class="button" onclick="btnmod()">
+
+		<input type="button" value="." class="button" onclick="btndot()">
+
+		<input type="button" value="/" class="button" onclick="btndiv()">
+         <!-- the "=" sign control all the function of calculator.. -->
+		<input type="button" value="=" class="button1" onclick="document.calculator.display.value = eval(document.calculator.display.value)">
+
+		<input type="button" value="C" class="button1" onclick="btnclear()">
+		
+
+	</form>
+</div>
+</body>
+</html>
